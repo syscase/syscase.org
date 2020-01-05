@@ -1,0 +1,43 @@
+{
+  "name": "syscase-website",
+  "description": "Syscase website",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://syscase.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syscase/syscase.org.git"
+  },
+  "bugs": {
+    "url": "https://github.com/syscase/syscase.org/issues"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --config .prettierrc --write \"**/*.{js,jsx,json,md}\"",
+    "format:diff": "prettier --config .prettierrc --list-different \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint .",
+    "ci": "npm-run-all format:diff --parallel lint flow",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "engines": {
+    "node": ">13.3.0",
+    "npm": "^6.13.1"
+  },
+  "dependencies": {
+    "gatsby": "^2.18.17",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "flow-bin": "^0.115.0",
+    "@babel/preset-flow": "^7.7.4",
+    "eslint-config-prettier": "^6.9.0"
+  }
+}
