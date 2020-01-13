@@ -1,9 +1,9 @@
-'use strict';
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
     title: 'Syscase: A Fuzzing Framework for ARM TrustZone',
-    siteUrl: 'https://syscase.org'
+    siteUrl: 'https://syscase.org',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,5 +17,5 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-  ]
-}
+  ],
+};

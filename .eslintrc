@@ -1,15 +1,21 @@
 {
   "extends": [
-    "fbjs"
+    "fbjs-opensource"
   ],
   "plugins": [
     "prettier",
     "react"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parser": "babel-eslint",
   "rules": {
     "relay/graphql-naming": 0,
-    "max-len": 0
+    "max-len": 0,
+    "no-console": ["error", { allow: ["warn", "error"] }]
   },
   "env": {
     "node": true,
