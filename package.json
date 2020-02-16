@@ -13,16 +13,18 @@
     "url": "https://github.com/syscase/syscase.org/issues"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --config .prettierrc --write \"**/*.{js,jsx,json,md}\"",
-    "format:diff": "prettier --config .prettierrc --list-different \"**/*.{js,jsx,json,md}\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "ci": "npm-run-all format:diff --parallel lint flow",
+    "exec": "PATH=\"$PATH:./node_modules/.bin\" $@",
+    "build": "npm run exec -- gatsby build",
+    "develop": "npm run exec -- gatsby develop",
+    "flow": "npm run exec flow",
+    "format": "npm run exec -- prettier --config .prettierrc --write \"**/*.{js,jsx,json,md}\"",
+    "format:diff": "npm run exec -- prettier --config .prettierrc --list-different \"**/*.{js,jsx,json,md}\"",
+    "lint": "npm run exec -- eslint .",
+    "lint:fix": "npm run exec -- eslint --fix .",
+    "ci": "npm run exec -- npm-run-all format:diff --parallel lint flow",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "serve": "npm run exec -- gatsby serve",
+    "clean": "npm run exec -- gatsby clean"
   },
   "engines": {
     "node": ">13.3.0",
