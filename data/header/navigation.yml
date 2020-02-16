@@ -1,0 +1,5 @@
+links:
+  - key: docs
+    title: Docs
+    to: /docs/getting-started.html
+    activeSelector: /docs/
