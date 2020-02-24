@@ -1,7 +1,7 @@
 ---
 id: test2
 title: Test2
-slug: docs/test2
+slug: docs/test/test2
 ---
 
 # Test2
