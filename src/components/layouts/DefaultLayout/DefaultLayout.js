@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {media} from 'theme';
+import {media, colors} from 'theme';
 import Flex from 'components/Flex';
 import Footer from './Footer';
 import Header from './Header';
@@ -28,6 +28,8 @@ class DefaultLayout extends Component<Props> {
           grow="1"
           valign="stretch"
           css={{
+            backgroundColor: colors.light.backgroundColor,
+            color: colors.light.color,
             flex: '1 0 auto',
             marginTop: 60,
             [media.between('medium', 'large')]: {

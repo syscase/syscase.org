@@ -1,5 +1,28 @@
 const colors = {
   activeNavLink: '#8811ff',
+  logo: {
+    green: '#A1C51A',
+    orange: '#FA7901',
+    white: '#ffffff',
+    black: '#000000',
+  },
+  button: {
+    primary: '#A1C51A',
+    cta: '#FA7901',
+  },
+  dark: {
+    backgroundColor: '#222320',
+    color: '#F2F2F2',
+  },
+
+  middle: {
+    backgroundColor: '#71726F',
+    color: '#ffffff',
+  },
+  light: {
+    backgroundColor: '#F2F2F2',
+    color: '#222320',
+  },
 };
 
 const MEDIA_SIZES = {

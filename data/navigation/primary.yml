@@ -1,0 +1,53 @@
+links:
+  docs:
+    title: Docs
+    to: /docs/test/test
+    activeSelector: /docs/
+    sections:
+      test:
+        title: Test Section 1
+        activeSelector: /docs/test/
+        items:
+          test:
+            id: test
+            title: Test 1
+            to: /docs/test/test
+          test2:
+            id: test2
+            title: Test 2
+            to: /docs/test/test2
+      test2:
+        title: Test Section 2
+        activeSelector: /docs/test2/
+        items:
+          test:
+            id: test
+            title: Test 1
+            to: /docs/test2/test
+          test2:
+            id: test2
+            title: Test 2
+            to: /docs/test2/test2
+  blog:
+    title: Blog
+    to: /blog/test/test
+    activeSelector: /blog/
+    footer: false
+  channels:
+    title: Channels
+    header: false
+    sections:
+      test:
+        title: GitHub
+        activeSelector: https://github.com/syscase 
+        items:
+          test:
+            id: github
+            title: GitHub
+            to: https://github.com/syscase 
+            external: true
+  community:
+    title: Community
+    to: /community/test/test
+    activeSelector: /community/
+
