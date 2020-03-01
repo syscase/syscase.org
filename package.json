@@ -21,7 +21,9 @@
     "format:diff": "npm run exec -- prettier --config .prettierrc --list-different \"**/*.{js,jsx,json,md}\"",
     "lint": "npm run exec -- eslint .",
     "lint:fix": "npm run exec -- eslint --fix .",
-    "ci": "npm run exec -- npm-run-all format:diff --parallel lint flow",
+    "test": "npm run exec -- testcafe all tests/",
+    "test-cli": "npm run exec -- testcafe -c 2 chromium:headless,firefox:headless -s takeOnFails=true all tests/",
+    "ci": "npm run exec -- npm-run-all format:diff --parallel lint flow test-cli",
     "start": "npm run develop",
     "serve": "npm run exec -- gatsby serve",
     "clean": "npm run exec -- gatsby clean"
