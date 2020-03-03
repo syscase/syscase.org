@@ -1,10 +1,12 @@
 {
   "extends": [
     "fbjs-opensource",
+    "plugin:testcafe/recommended",
   ],
   "plugins": [
     "prettier",
     "react",
+    "testcafe",
   ],
   "settings": {
     "react": {
