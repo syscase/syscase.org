@@ -3,24 +3,16 @@ import PropTypes from 'prop-types';
 import Container from 'components/Container';
 import {colors} from 'theme';
 import NavLink from './NavLink';
-import navigation from '../../../../../data/navigation/primary.yml';
-
-const linkShape = PropTypes.shape({
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-});
-
-const linkItemsType = PropTypes.arrayOf(PropTypes.objectOf(linkShape));
-
-const itemsShape = PropTypes.shape({
-  items: linkItemsType.required,
-});
+import {
+  navigation,
+  linksShape,
+  sectionShape,
+} from '../../../../../data/navigation/primary.js';
 
 class NavSections extends React.Component {
   static get propTypes() {
     return {
-      sections: PropTypes.objectOf(itemsShape),
+      sections: PropTypes.objectOf(sectionShape).isRequired,
     };
   }
 
@@ -39,6 +31,12 @@ class NavSections extends React.Component {
 }
 
 class FooterNavigation extends React.Component {
+  static get propTypes() {
+    return {
+      navigation: linksShape.isRequired,
+    };
+  }
+
   render() {
     return Object.entries(this.props.navigation.links)
       .filter(([key, link]) => {

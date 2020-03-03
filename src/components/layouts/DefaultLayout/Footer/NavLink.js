@@ -1,8 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {colors} from 'theme';
 import {Link} from 'gatsby';
 
 class NavLink extends React.Component {
+  static get propTypes() {
+    return {
+      title: PropTypes.string.isRequired,
+      to: PropTypes.string,
+      isActive: PropTypes.bool.isRequired,
+    };
+  }
+
   internal() {
     return (
       <Link

@@ -2,13 +2,22 @@ import React from 'react';
 import Container from 'components/Container';
 import {Link} from 'gatsby';
 import NavLink from './NavLink';
-import navigation from '../../../../../data/navigation/primary.yml';
+import {
+  navigation,
+  linksShape,
+} from '../../../../../data/navigation/primary.js';
 import {media, colors} from 'theme';
 
 import logo from 'images/logo-light.svg';
 import fullLogo from 'images/logo-full-light.svg';
 
 class HeaderNavigation extends React.Component {
+  static get propTypes() {
+    return {
+      navigation: linksShape.isRequired,
+    };
+  }
+
   render() {
     return Object.entries(this.props.navigation.links)
       .filter(([key, link]) => {
